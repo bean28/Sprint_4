@@ -26,80 +26,84 @@ public class MainPage {
     private By orderUp = By.className("Button_Button__ra12g");
     private By orderDown = By.xpath("//button[@class='Button_Button__ra12g Button_Middle__1CSJM']");
 
+    public void clickOnElement(By locator) {
+        WebElement element = driver.findElement(locator);
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", element);
+        element.click();
+    }
+
     public void clickOrderUp() {
-        WebElement element = driver.findElement(orderUp);
-        ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();", element);
-        element.click();
+        clickOnElement(orderUp);
     }
+
     public void clickOrderDown() {
-        WebElement element = driver.findElement(orderDown);
-        ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();", element);
-        element.click();
+        clickOnElement(orderDown);
     }
+
     public void clickAccordion0() {
-        WebElement element = driver.findElement(accordion0);
-        ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();", element);
-        element.click();
+        clickOnElement(accordion0);
     }
+
     public void clickAccordion1() {
-        WebElement element = driver.findElement(accordion1);
-        ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();", element);
-        element.click();
+        clickOnElement(accordion1);
     }
+
     public void clickAccordion2() {
-        WebElement element = driver.findElement(accordion2);
-        ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();", element);
-        element.click();
+        clickOnElement(accordion2);
     }
+
     public void clickAccordion3() {
-        WebElement element = driver.findElement(accordion3);
-        ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();", element);
-        element.click();
+        clickOnElement(accordion3);
     }
+
     public void clickAccordion4() {
-        WebElement element = driver.findElement(accordion4);
-        ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();", element);
-        element.click();
+        clickOnElement(accordion4);
     }
+
     public void clickAccordion5() {
-        WebElement element = driver.findElement(accordion5);
-        ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();", element);
-        element.click();
+        clickOnElement(accordion5);
     }
+
     public void clickAccordion6() {
-        WebElement element = driver.findElement(accordion6);
-        ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();", element);
-        element.click();
+        clickOnElement(accordion6);
     }
+
     public void clickAccordion7() {
-        WebElement element = driver.findElement(accordion7);
-        ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();", element);
-        element.click();
+        clickOnElement(accordion7);
     }
+
     public String getTextPanel0() {
         return driver.findElement(panel0).getText();
     }
+
     public String getTextPanel1() {
         return driver.findElement(panel1).getText();
     }
+
     public String getTextPanel2() {
         return driver.findElement(panel2).getText();
     }
+
     public String getTextPanel3() {
         return driver.findElement(panel3).getText();
     }
+
     public String getTextPanel4() {
         return driver.findElement(panel4).getText();
     }
+
     public String getTextPanel5() {
         return driver.findElement(panel5).getText();
     }
+
     public String getTextPanel6() {
         return driver.findElement(panel6).getText();
     }
+
     public String getTextPanel7() {
         return driver.findElement(panel7).getText();
     }
+
     public MainPage(WebDriver driver) {
         this.driver = driver;
     }

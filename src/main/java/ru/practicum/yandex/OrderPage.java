@@ -96,6 +96,24 @@ public class OrderPage {
         return driver.findElement(orderSuccess).isDisplayed();
     }
 
+    public void fillOrder(String name,
+                          String userSurname,
+                          String address,
+                          String station,
+                          String phone,
+                          String date,
+                          String rent) {
+        fillUserName(name);
+        fillUserSurname(userSurname);
+        fillAddress(address);
+        fillStation(station);
+        fillPhone(phone);
+        clickButtonNext();
+        choseRent(date);
+        choseDuration(rent);
+        clickColor();
+    }
+
     public OrderPage(WebDriver driver) {
         this.driver = driver;
     }
